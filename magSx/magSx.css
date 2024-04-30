@@ -8,10 +8,10 @@ ul#sideNav {
 }
 
 div#sidePlaceholder {
-    margin-right: 87.5%;
+    margin-right: 86vw;
+    margin-left: 0vw;
     padding-top:0.5vw;
     padding-bottom: 0.5vw;
-    padding-left:2vw;
     background-color: rgba(50, 44, 43, 0.85);
     margin-top:45px;
     border-radius: 16px;
@@ -19,6 +19,8 @@ div#sidePlaceholder {
 
 li.navSideItem{
     font-size:24px;
+    text-align: center;
+    text-wrap: nowrap;
 }
 
 a.sideNavLinks {

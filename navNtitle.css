@@ -32,7 +32,8 @@ ul.navBar {
 li.tabArrange {
     list-style-type: none;
     padding: 10px 20px;
-
+    text-align: center;
+    text-wrap:nowrap;
 }
 
 a.tabLinks:link, a.tabLinks:visited {
