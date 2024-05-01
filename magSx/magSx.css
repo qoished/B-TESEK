@@ -48,12 +48,11 @@ button.sideNavLinks {
 
 button.sideNavLinks:hover h4.parInher {
     transform: scale(1.15);
-    color: #b15772;
+    color: lightsteelblue;
     transition: all 0.5s;
 }
 
 button.sideNavLinks:hover {
-    background-color: rgb(36, 26, 26);
     transition: all 0.5s;
 }
 
