@@ -2,7 +2,7 @@
 
 body{
     font-family: verdana;
-    background-color: rgba(228, 197, 158, 0.75);
+    background-color: #5c323e;
     scroll-behavior: smooth;
     overflow-x:auto;
      
@@ -11,7 +11,7 @@ body{
 ul.navBar li.tabArrange a#active:after {
     content: "";
     height: 5px;
-    background-color:black;
+    background-color:#9b5469;
     position: absolute;
     top: 120%;
     left: 0;
@@ -40,7 +40,7 @@ a.tabLinks:link, a.tabLinks:visited {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 20px;
-    color: black;
+    color:#895061;
     position: relative;
 }
 
@@ -49,7 +49,7 @@ ul.navBar li.tabArrange a.tabLinks:before {
     content: "";
     width: 0;
     height: 5px;
-    background-color:black;
+    background-color:#9b5469;
     position: absolute;
     top: 120%;
     left: 50%;
@@ -65,7 +65,7 @@ h1.hArrange {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(175, 130, 96, 0.8);
+    background-color: #895061;
     border-radius: 16px;
     padding: 1vh 0vh 1vh 0vh;
 }
@@ -78,7 +78,7 @@ div.divArrange {
 
 div.divStyle{
     font-size: 24px;
-    background-color: rgba(128, 61, 59, 0.55);
+    background-color: rgb(36, 26, 26);
     border-radius:16px;
 }
 
