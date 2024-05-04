@@ -2,20 +2,26 @@
 
 body{
     font-family: verdana;
-    background-color: #5c323e;
+    background-color: #b7b6c1;
     scroll-behavior: smooth;
     overflow-x:auto;
      
 }
 
-ul.navBar li.tabArrange a#active:after {
+ul.navBar li.tabArrange button.active:after {
     content: "";
     height: 5px;
-    background-color:#9b5469;
+    background-color: white;
     position: absolute;
     top: 120%;
     left: 0;
     width: 100%;
+    transition: all 0.5s;
+}
+
+ul.navBar li.tabArrange button#active:hover:after {
+    left: 25%;
+    width: 50%;
 }
 
 div#mainDiv{
@@ -36,36 +42,48 @@ li.tabArrange {
     text-wrap:nowrap;
 }
 
-a.tabLinks:link, a.tabLinks:visited {
+button.tabLinks {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 20px;
-    color:#895061;
+    color:white;
+    border:none;
+    background-color: #464655;
     position: relative;
+    font-family: "Carlito", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
+:root {
+    --hover-width: 50%;
+    --hover-left: 25%;
+    --selection-width: 0;
+    --selection-left : 50%;
+}
+ 
 
-ul.navBar li.tabArrange a.tabLinks:before {
+ul.navBar li.tabArrange button.tabLinks:before {
     content: "";
-    width: 0;
+    width: var(--selection-width);
     height: 5px;
-    background-color:#9b5469;
+    background-color: white;
     position: absolute;
     top: 120%;
-    left: 50%;
+    left: var(--selection-left);
     transition: all 0.5s;
 }
 
-ul.navBar li.tabArrange a.tabLinks:hover:before {
-    left: 0;
-    width: 100%;
+ul.navBar li.tabArrange button.tabLinks:hover:before {
+    left: var(--hover-left);
+    width: var(--hover-width);
 }
 
 h1.hArrange {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #895061;
+    background-color: #94958b;
     border-radius: 16px;
     padding: 1vh 0vh 1vh 0vh;
 }
@@ -78,7 +96,7 @@ div.divArrange {
 
 div.divStyle{
     font-size: 24px;
-    background-color: rgb(36, 26, 26);
+    background-color: #464655;
     border-radius:16px;
 }
 
