@@ -1,13 +1,40 @@
 
 function btnAnim(retVal) {
+    let classF;
     document.documentElement.style.setProperty("--hover-left", "0");
     document.documentElement.style.setProperty("--hover-width", "100%");
-
+    for (let i = 32; i <= 36; i++) {
+        if (i == retVal) {
+            classF = document.getElementById(i).className;
+            if (classF != "tabLinks active"){
+                classSetter(i, classF);
+            }
+        }
+    }
 }
 
-function btnValsReset() {
-    document.documentElement.style.setProperty("--hover-left", "25%");
-    document.documentElement.style.setProperty("--hover-width", "50%");
+function classSetter(pick, classP) {
+    document.getElementById(pick).className = classP + " smoother";
+    hoverCh();
+    setTimeout(function() {underAnim()}, 5);
+}
+
+function hoverCh() {
+    document.documentElement.style.setProperty("--hover-left", "0");
+    document.documentElement.style.setProperty("--hover-width", "100%");
+    setTimeout(function reset(){
+        document.documentElement.style.setProperty("--hover-left", "25%");
+        ocument.documentElement.style.setProperty("--hover-width", "50%");
+    }, 600)
+}
+
+function underAnim() {
+    document.documentElement.style.setProperty("--smooth-left", "0");
+    document.documentElement.style.setProperty("--smooth-width", "100%");
+    setTimeout(function reset() {
+        document.documentElement.style.setProperty("--smooth-left", "50%");
+        document.documentElement.style.setProperty("--smooth-width", "0");
+    }, 600)
 }
 
 function timer1(value1) {
@@ -30,7 +57,7 @@ function redirect(Vl) {
             window.location = "auxent/auxentia.html";
             break;
         case "35":
-            window.location = "sarantaxrona/sarantaxrona.html";
+            window.location = "sarantSxoli/sarantaxrona.html";
             break;
         case "36":
             window.location = "mphotos/morePhotos.html";

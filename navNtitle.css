@@ -8,17 +8,6 @@ body{
      
 }
 
-ul.navBar li.tabArrange button.active:after {
-    content: "";
-    height: 5px;
-    background-color: white;
-    position: absolute;
-    top: 120%;
-    left: 0;
-    width: 100%;
-    transition: all 0.5s;
-}
-
 ul.navBar li.tabArrange button#active:hover:after {
     left: 25%;
     width: 50%;
@@ -30,14 +19,16 @@ div#mainDiv{
 }
 
 ul.navBar {
-    padding: 0;
     display: flex;
+    flex-wrap: wrap;
+    padding: 0;
     transition: all 0.8s;
 }
   
 li.tabArrange {
+    flex-grow: 1;
+    flex-basis: 200;
     list-style-type: none;
-    padding: 10px 20px;
     text-align: center;
     text-wrap:nowrap;
 }
@@ -60,6 +51,8 @@ button.tabLinks {
     --hover-left: 25%;
     --selection-width: 0;
     --selection-left : 50%;
+    --smooth-width: 0;
+    --smooth-left: 50%;
 }
  
 
@@ -77,6 +70,29 @@ ul.navBar li.tabArrange button.tabLinks:before {
 ul.navBar li.tabArrange button.tabLinks:hover:before {
     left: var(--hover-left);
     width: var(--hover-width);
+    transition: all 0.5s;
+}
+
+ul.navBar li.tabArrange button.active:after {
+    content: "";
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+ul.navBar li.tabArrange button.smoother:after {
+    content: "";
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    top: 120%;
+    left: var(--smooth-left);
+    width: var(--smooth-width);
+    transition: all 0.5s;
 }
 
 h1.hArrange {
