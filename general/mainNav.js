@@ -15,8 +15,7 @@ function btnAnim(retVal) {
 
 function classSetter(pick, classP) {
     document.getElementById(pick).className = classP + " smoother";
-    hoverCh();
-    setTimeout(function() {underAnim()}, 5);
+    setTimeout(function() {underAnim(), hoverCh()}, 5);
 }
 
 function hoverCh() {

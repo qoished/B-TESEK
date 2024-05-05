@@ -2,20 +2,20 @@
 
 ul#sideNav {
     list-style-type: none;
-    display:contents;
-    
+    display: contents;
 }
 
 
 div#sidePlaceholder {
-    margin-right: 86vw;
+    margin-right: 70vw;
     background-color: none;
     margin-top:45px;
     border-radius: 16px;
     -ms-overflow-style: none;
     scrollbar-width: none;
     height: 80vh;
-    scroll-behavior:smooth;
+    overflow: scroll;
+    scroll-behavior:smooth visible;
 }
 
 div#sidePlaceholder::-webkit-scrollbar {
@@ -26,6 +26,7 @@ li.navSideItem{
     font-size:24px;
     text-align: center;
     text-wrap: nowrap;
+    margin-right: 23vw;
 }
 
 button.sideNavLinks {
